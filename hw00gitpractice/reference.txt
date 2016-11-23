@@ -4,3 +4,4 @@ add - keeps track of a single file.
 commit - creates a new version using all the files that have been added.
 push - updates github repository using the local copy on a local machine.
 status - lists status of all files, and whether they've been added or committed.
+pinata
