@@ -19,7 +19,7 @@ public class SuperArrayIterator implements Iterator<String> {
 	    return s;
 	}
 
-	else throw new IndexOutOfBoundsException();
+	else throw new NoSuchElementException();
     }
     
     public void remove() {

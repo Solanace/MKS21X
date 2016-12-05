@@ -189,7 +189,7 @@ public class SuperArray implements Iterable<String>{
 	data = a;
     }
 
-    public SuperArrayIterator iterator() {
+    public Iterator<String> iterator() {
 	return new SuperArrayIterator(this);
     }
 }
