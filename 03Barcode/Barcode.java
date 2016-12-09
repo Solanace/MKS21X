@@ -72,7 +72,7 @@ public class Barcode implements Comparable<Barcode> {
 
 	String finalString = "";
 	String[] converter = {"||:::", ":::||", "::|:|", "::||:", ":|::|",
-			    ":|:|:", ":||::", "|:::|", "|::|:", "|:|::"};
+			      ":|:|:", ":||::", "|:::|", "|::|:", "|:|::"};
 	for (int position = 0; position < zip.length(); position ++) {
 	    finalString += converter[zip.charAt(position) - 48];
 	}
