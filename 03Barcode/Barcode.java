@@ -31,7 +31,7 @@ public class Barcode implements Comparable<Barcode> {
     
     
     // postcondition: computes and returns the check sum for _zip
-    public static int checkSum(String zip) {
+    private static int checkSum(String zip) {
 	int sum = 0;
 	for (int position = 0; position < zip.length(); position ++) {
 	    sum += (int)zip.charAt(position) - 48; // 48 is 0
@@ -76,7 +76,6 @@ public class Barcode implements Comparable<Barcode> {
 	for (int position = 0; position < zip.length(); position ++) {
 	    finalString += converter[zip.charAt(position) - 48];
 	}
-	System.out.println(finalString.length());
 	return "|" + finalString + "|";
     }
 
@@ -89,7 +88,6 @@ public class Barcode implements Comparable<Barcode> {
 	}
 	for (int position = 0; position < code.length(); position ++) {
 	    if (code.charAt(position) != ':' && code.charAt(position) != '|') {
-		System.out.println(code.charAt(position));
 		throw new IllegalArgumentException("Invalid zipcode (non-colon and/or non-bar characters).");
 	    }
 	}
