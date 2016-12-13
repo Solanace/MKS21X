@@ -4,8 +4,8 @@ public class Sorts {
     }
 
     public static void selectionSort(int[] data) {
-	int tempPos; // temp is the position of the smallest number
-	int temp;
+	int tempPos; // tempPos is the position of the smallest number
+	int tempInt; // tempInt is the intermediary between the current index and the smallest number
 	for (int index = 0; index < data.length - 1; index ++) {
 	    tempPos = index;
 	    for (int pos = index; pos < data.length; pos ++) {
@@ -13,9 +13,9 @@ public class Sorts {
 		    tempPos = pos;
 		}
 	    }
-	    temp = data[index];
+	    tempInt = data[index];
 	    data[index] = data[tempPos];
-	    data[tempPos] = temp;
+	    data[tempPos] = tempInt;
 	}
     }
 }
