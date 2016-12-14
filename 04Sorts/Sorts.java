@@ -18,4 +18,15 @@ public class Sorts {
 	    data[tempPos] = tempInt;
 	}
     }
+
+    public static void insertionSort(int[] data) {
+	int tempInt;
+	for (int index = 1; index < data.length; index ++) {
+	    for (int revIndex = index - 1; revIndex > -1; revIndex --) {
+	        if (data[index] > data[revIndex] || revIndex == 0) {
+		    System.out.println(index + " is greater than " + revIndex);
+		}
+	    }
+	}
+    }
 }
