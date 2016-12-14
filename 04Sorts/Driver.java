@@ -1,7 +1,7 @@
 public class Driver {
     public static void main(String[] args) {
 	System.out.println(Sorts.name());
-	int[] ary = {3, 5, 1};
+	int[] ary = {10, 9, 8, 7, 6, 5, -4, 3, 2, 1, 0};
 	
 	System.out.print("[");
 	for (int i = 0; i < ary.length; i ++) {

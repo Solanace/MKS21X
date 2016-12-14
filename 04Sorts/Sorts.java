@@ -20,13 +20,18 @@ public class Sorts {
     }
 
     public static void insertionSort(int[] data) {
-	int tempInt;
-	for (int index = 1; index < data.length; index ++) {
-	    for (int revIndex = index - 1; revIndex > -1; revIndex --) {
-	        if (data[index] > data[revIndex] || revIndex == 0) {
-		    System.out.println(index + " is greater than " + revIndex);
-		}
+	int carryOver; // the int that gets sorted
+	int shift; // the number of places left that carryOver gets shifted
+	for (int index = 1; index < data.length; index ++) { // index starts at 1, since data[0] is sorted already
+	    shift = 0;
+	    carryOver = data[index]; // copies the value that gets sorted
+	    for (int reverse = index - 1; reverse > -1 && data[reverse] > carryOver; reverse --) {
+	        shift += 1;
 	    }
+	    for (int loop = 0; loop < shift; loop ++) {
+		data[index - loop] = data[index - loop - 1];
+	    }
+	    data[index - shift] = carryOver;
 	}
     }
 }
