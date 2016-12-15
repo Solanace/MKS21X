@@ -42,9 +42,9 @@ public class Sorts {
 	    hasSwapped = false;
 	    for (int forwardLoop = 0; forwardLoop < max; forwardLoop ++) {
 		System.out.print("[");
-		for (int i = 0; i < data.length; i ++) {
-		    System.out.print(data[i] + ", ");
-		}
+		/*for (int i = 0; i < data.length; i ++) {
+		  System.out.print(data[i] + ", ");
+		  }*/
 		System.out.println("]");
 		if (data[forwardLoop] > data[forwardLoop + 1]) {
 		    hasSwapped = true;
