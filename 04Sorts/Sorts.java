@@ -38,14 +38,14 @@ public class Sorts {
     public static void bubbleSort(int[] data) {
 	boolean hasSwapped = true; // whether the last pass swapped any two pairs
 	int tempInt;
-	for (int max = data.length - 1; hasSwapped == true && max > -1; max --) { // integers beyond max are sorted
+	for (int max = data.length - 1; hasSwapped && max > -1; max --) { // integers beyond max are sorted
 	    hasSwapped = false;
 	    for (int forwardLoop = 0; forwardLoop < max; forwardLoop ++) {
-		System.out.print("[");
-		/*for (int i = 0; i < data.length; i ++) {
+		/*System.out.print("[");
+		  for (int i = 0; i < data.length; i ++) {
 		  System.out.print(data[i] + ", ");
-		  }*/
-		System.out.println("]");
+		  }
+		  System.out.println("]");*/
 		if (data[forwardLoop] > data[forwardLoop + 1]) {
 		    hasSwapped = true;
 		    tempInt = data[forwardLoop];
