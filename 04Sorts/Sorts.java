@@ -38,7 +38,7 @@ public class Sorts {
     public static void bubbleSort(int[] data) {
 	boolean hasSwapped = true; // whether the last pass swapped any two pairs
 	int tempInt;
-	for (int max = data.length - 1; hasSwapped && max > -1; max --) { // integers beyond max are sorted
+	for (int max = data.length - 1; hasSwapped; max --) { // integers beyond max are sorted
 	    hasSwapped = false;
 	    for (int forwardLoop = 0; forwardLoop < max; forwardLoop ++) {
 		/*System.out.print("[");
